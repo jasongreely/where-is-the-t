@@ -1,5 +1,12 @@
-task default: %w[test]
+require 'bundler/setup'
+Bundler.require(:default)
 
-task :test do
-  ruby "lib/service.rb"
+$LOAD_PATH << __dir__
+
+require 'active_support/all'
+
+require_rel 'lib/*.rb'
+
+task :default do
+  ruby 'lib/service.rb'
 end
