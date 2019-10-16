@@ -9,7 +9,7 @@ class MBTA_Utils
   end
 
   def get_lines
-    uri = URI(@mbta_uri)
+    uri = URI(@mbta_uri + 'lines')
 
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
