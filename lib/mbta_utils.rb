@@ -18,6 +18,7 @@ class MBTA_Utils
     request["api_key"] = @mbta_key
 
     response = http.request(request)
-    JSON.parse(response.read_body)
+    body = JSON.parse(response.read_body)
+    body["data"]
   end
 end

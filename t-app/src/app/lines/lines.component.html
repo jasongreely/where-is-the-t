@@ -1,1 +1,5 @@
-<p>lines works!</p>
+<ul>
+  <li *ngFor="let line of lines; let i=index;">
+    <p [ngStyle]="{'font-weight': 'bold', 'color' : '#' + line.attributes.color}">{{line.attributes.long_name}}</p>
+  </li>
+</ul>

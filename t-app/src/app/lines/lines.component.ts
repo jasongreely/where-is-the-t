@@ -19,7 +19,6 @@ export class LinesComponent implements OnInit {
   getLines() {
     this.lines = [];
     this.rest.getLines().subscribe((data: {}) => {
-      console.log(data);
       this.lines = data;
     })
   }
