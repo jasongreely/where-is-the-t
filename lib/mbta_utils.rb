@@ -4,11 +4,8 @@ require 'dotenv/load'
 
 class MBTA_Utils
   def initialize()
-    puts 'initing'
     @mbta_uri = ENV["mbta_uri"]
-    puts @mbta_uri
     @mbta_key = ENV["mbta_key"]
-    puts @mbta_key
   end
 
   def get_lines

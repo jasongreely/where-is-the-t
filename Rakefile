@@ -4,6 +4,7 @@ Bundler.require(:default)
 $LOAD_PATH << __dir__
 
 require 'active_support/all'
+require 'figaro/sinatra'
 
 require_rel 'lib/*.rb'
 

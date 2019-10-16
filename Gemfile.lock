@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/bpaquet/figaro.git
+  revision: fd7566157252e7bb090bbef32e4e377091deb003
+  branch: sinatra
+  specs:
+    figaro (1.1.1)
+      thor (~> 0.14)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,8 +38,6 @@ GEM
       railties (>= 3.2, < 6.1)
     erubi (1.9.0)
     eventmachine (1.2.7)
-    figaro (1.1.1)
-      thor (~> 0.14)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     loofah (2.3.0)
@@ -83,7 +89,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   dotenv-rails
-  figaro
+  figaro!
   rake
   require_all
   sinatra
