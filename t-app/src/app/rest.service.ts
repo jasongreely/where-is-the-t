@@ -24,7 +24,12 @@ export class RestService {
   }
 
   public getLines(): Observable<any> {
-    return this.http.get(this.endpoint + '/').pipe(
+    return this.http.get(this.endpoint + '/lines').pipe(
+      map(this.extractData));
+  }
+
+  public getStops(route): Observable<any>{
+    return this.http.get(this.endpoint + '/stops/' + route).pipe(
       map(this.extractData));
   }
 }

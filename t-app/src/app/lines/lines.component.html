@@ -1,5 +1,6 @@
 <ul>
   <li *ngFor="let line of lines; let i=index;">
-    <p [ngStyle]="{'font-weight': 'bold', 'color' : '#' + line.attributes.color}">{{line.attributes.long_name}}</p>
+    <a [routerLink]="['/lines/' + line.id]" [queryParams]="{'long_name': line.attributes.long_name}"
+       [ngStyle]="{'font-weight': 'bold', 'color' : '#' + line.attributes.color}">{{line.attributes.long_name}}</a>
   </li>
 </ul>

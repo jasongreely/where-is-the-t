@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LinesComponent } from './lines/lines.component';
 import {HttpClientModule} from "@angular/common/http";
+import { LineDetailComponent } from './line-detail/line-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LinesComponent
+    LinesComponent,
+    LineDetailComponent
   ],
   imports: [
     BrowserModule,

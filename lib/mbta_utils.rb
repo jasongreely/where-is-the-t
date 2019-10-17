@@ -21,4 +21,18 @@ class MBTA_Utils
     body = JSON.parse(response.read_body)
     body["data"]
   end
+
+  def get_stops(route)
+    uri = URI(@mbta_uri + "stops?filter[route]=#{route}")
+
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+
+    request = Net::HTTP::Get.new(uri)
+    request["api_key"] = @mbta_key
+
+    response = http.request(request)
+    body = JSON.parse(response.read_body)
+    body["data"]
+  end
 end

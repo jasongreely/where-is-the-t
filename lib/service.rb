@@ -22,7 +22,12 @@ options "*" do
   200
 end
 
-get '/' do
+get '/lines' do
   mbta_utils = MBTA_Utils.new
   JSON.pretty_generate(mbta_utils.get_lines)
+end
+
+get '/stops/:route' do
+  mbta_utils = MBTA_Utils.new
+  JSON.pretty_generate(mbta_utils.get_stops(params['route']))
 end
